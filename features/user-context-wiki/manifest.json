@@ -2,7 +2,7 @@
   "schema_version": "memact.feature_manifest.v0",
   "feature_id": "user-context-wiki",
   "name": "Memory Wiki",
-  "description": "Groups Memact memory by category and schema type.",
+  "description": "Groups permitted schema packets into readable memory sections with highlights and source trails.",
   "required_scopes": ["feature:run", "memory:read_summary"],
   "required_schema_types": ["*"],
   "input_contract": "memact.schema_packet.v0[]",

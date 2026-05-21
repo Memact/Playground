@@ -2,13 +2,13 @@
 
 Studio is where Memact features are built and tested.
 
-Features are tools that use Memact memory and schema packets.
+Features are small apps that use permitted Memact memory and schema packets.
 
 Examples:
 
-- Memory Wiki
-- Cognitive Load
-- Research Map
+- Memory Wiki: turns schema packets into readable sections, highlights, and source trails.
+- Cognitive Load: turns permitted activity into a workload signal an app can adapt to.
+- Research Map: turns research packets into themes, source trails, open questions, and next steps.
 
 Studio is the open-source/default/community feature repo. Future private or
 commercial features do not all have to live here.

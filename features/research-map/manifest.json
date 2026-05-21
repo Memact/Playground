@@ -2,7 +2,7 @@
   "schema_version": "memact.feature_manifest.v0",
   "feature_id": "research-map",
   "name": "Research Map",
-  "description": "Builds themes, sources, and clusters from permitted research memory.",
+  "description": "Builds research themes, source trails, open questions, and next steps from permitted packets.",
   "required_scopes": ["feature:run", "schema:read"],
   "required_schema_types": ["research", "learning"],
   "input_contract": "memact.schema_packet.v0[]",

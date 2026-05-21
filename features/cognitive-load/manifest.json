@@ -1,0 +1,10 @@
+{
+  "schema_version": "memact.feature_manifest.v0",
+  "feature_id": "cognitive-load",
+  "name": "Cognitive Load",
+  "description": "Estimates app-context workload from permitted context.",
+  "required_scopes": ["feature:run", "schema:read"],
+  "required_schema_types": ["attention", "productivity", "work"],
+  "input_contract": "memact.schema_packet.v0[]",
+  "output_contract": "memact.feature_run_result.v0"
+}

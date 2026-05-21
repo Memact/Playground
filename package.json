@@ -1,0 +1,23 @@
+{
+  "name": "@memact/studio",
+  "version": "0.0.1",
+  "private": false,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "Open-source Memact feature runtime and default feature library.",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "check": "node --test",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Memact/Studio.git"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": "memact.feature_manifest.v0",
   "feature_id": "user-context-wiki",
-  "name": "User Context Wiki",
-  "description": "Groups Memact context by category and schema type.",
+  "name": "Memory Wiki",
+  "description": "Groups Memact memory by category and schema type.",
   "required_scopes": ["feature:run", "memory:read_summary"],
   "required_schema_types": ["*"],
   "input_contract": "memact.schema_packet.v0[]",

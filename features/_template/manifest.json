@@ -1,0 +1,10 @@
+{
+  "schema_version": "memact.feature_manifest.v0",
+  "feature_id": "your-feature-id",
+  "name": "Your Feature Name",
+  "description": "Explain what the feature does in one plain sentence.",
+  "required_scopes": ["feature:run"],
+  "required_schema_types": ["*"],
+  "input_contract": "memact.feature_run_request.v0",
+  "output_contract": "memact.feature_run_result.v0"
+}

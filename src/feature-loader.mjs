@@ -15,7 +15,7 @@ export async function loadFeature(featurePath) {
 export async function listLocalFeatures(featuresDir) {
   const entries = await fs.readdir(featuresDir, { withFileTypes: true })
   const features = []
-  for (const entry of entries.filter((item) => item.isDirectory())) {
+  for (const entry of entries.filter((item) => item.isDirectory() && !item.name.startsWith("_"))) {
     features.push(await loadFeature(path.join(featuresDir, entry.name)))
   }
   return features

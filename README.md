@@ -9,6 +9,7 @@ Examples:
 - Memory Wiki: turns schema packets into readable sections, highlights, and source trails.
 - Cognitive Load: turns permitted activity into a workload signal an app can adapt to.
 - Research Map: turns research packets into themes, source trails, open questions, and next steps.
+- Adaptive Article Overview: helps article apps choose a better overview style from the article and approved reading memory.
 
 Studio is the open-source/default/community feature repo. Future private or
 commercial features do not all have to live here.

@@ -21,7 +21,7 @@ test("valid and invalid manifests are handled", () => {
 test("listLocalFeatures finds examples", async () => {
   const features = await listLocalFeatures(path.join(root, "features"))
   const registry = createFeatureRegistry(features)
-  assert.equal(registry.length, 3)
+  assert.equal(registry.length, 4)
 })
 
 test("default features run", async () => {
@@ -42,4 +42,29 @@ test("default features run", async () => {
   })
   assert.equal(mapResult.output.clusters[0].theme, "api")
   assert.equal(mapResult.output.sources[0].title, "Docs")
+
+  const article = await loadFeature(path.join(root, "features", "adaptive-article-overview"))
+  const articleResult = await runFeature(article, {
+    article: {
+      title: "New AI policy rules",
+      excerpt: "The article explains new policy rules for AI systems.",
+      topic: "ai policy",
+      source: "Example News",
+      estimated_read_time_minutes: 8
+    },
+    reading_memory: {
+      average_read_time_seconds: 260,
+      average_scroll_depth: 88,
+      finish_rate: 0.82,
+      preferred_topics: ["ai policy"],
+      skipped_topics: ["celebrity"],
+      preferred_article_length: "long",
+      preferred_summary_style: "deep_dive",
+      repeat_topics: ["ai policy"]
+    },
+    recent_events: []
+  })
+  assert.equal(articleResult.output.summary_style, "deep_dive")
+  assert.match(articleResult.output.overview, /New AI policy rules/)
+  assert.equal(articleResult.output.confidence, "high")
 })

@@ -1,0 +1,10 @@
+{
+  "schema_version": "memact.feature_manifest.v0",
+  "feature_id": "adaptive-article-overview",
+  "name": "Adaptive Article Overview",
+  "description": "Creates article overviews based on the article and the user's approved reading memory.",
+  "required_scopes": ["feature:run", "memory:read_summary", "schema:read"],
+  "required_schema_types": ["reading_preferences"],
+  "input_contract": "memact.adaptive_article_overview_request.v0",
+  "output_contract": "memact.adaptive_article_overview_result.v0"
+}

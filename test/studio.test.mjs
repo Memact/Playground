@@ -18,7 +18,7 @@ test("valid and invalid manifests are handled", () => {
   assert.equal(validateFeatureManifest({ feature_id: "x" }).ok, false)
 })
 
-test("listLocalFeatures finds examples", async () => {
+test("listLocalFeatures finds local features", async () => {
   const features = await listLocalFeatures(path.join(root, "features"))
   const registry = createFeatureRegistry(features)
   assert.equal(registry.length, 4)

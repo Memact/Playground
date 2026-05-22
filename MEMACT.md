@@ -2,7 +2,7 @@
 
 A playground where apps personalize based on user preferences and digital activity.
 
-But this is done with user consent and data transparency.
+But this is done with user consent and Wiki visibility.
 
 This playground has 3 key players:
 
@@ -58,7 +58,7 @@ You are the developers building those services.
 
 ## Parts
 
-- Website: login, apps, API keys, consent, Help, Learn, Data Transparency.
+- Website: login, apps, API keys, consent, Help, Learn, Playground, and Wiki.
 - Access: checks if an app is allowed.
 - Capture: records activity from apps, sites, or optional capture tools.
 - Inference: understands activity.
@@ -79,6 +79,17 @@ You are the developers building those services.
 ## Studio features
 
 - Make small features like reading topics, shopping preferences, study maps, cognitive load, memory wiki, etc. Whatever is in your mind.
+
+## Consent and Wiki are required
+
+Any feature that apps can use must fit this user flow:
+
+1. The app shows Connect before access.
+2. The user chooses what the app may use.
+3. The app keeps a Wiki link visible after access.
+4. The Wiki explains what the app can add, what Memact may create, and how the user can stop future access.
+
+Do not design a Studio feature that only works through hidden data. The browser extension is optional, not required.
 
 ## Studio license and CLA
 

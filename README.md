@@ -4,11 +4,8 @@ Studio is where Memact features are built and tested.
 
 Features are small apps that use permitted Memact memory and schema packets.
 
-Examples:
+Current feature:
 
-- Memory Wiki: turns schema packets into readable sections, highlights, and source trails.
-- Cognitive Load: turns permitted activity into a workload signal an app can adapt to.
-- Research Map: turns research packets into themes, source trails, open questions, and next steps.
 - Adaptive Article Overview: helps article apps choose a better overview style from the article and approved reading memory.
 
 Studio is the open-source/default/community feature repo. Future private or
@@ -16,6 +13,14 @@ commercial features do not all have to live here.
 
 Contributors add features as folders. Each feature needs a manifest and a small
 runtime file. Keep features narrow, honest, and easy to review.
+
+## Consent and Wiki
+
+Every app-facing feature must sit behind consent and Wiki visibility:
+
+- Consent appears before access so the user chooses what an app may use.
+- Wiki appears after access so the user can see what the app can add, what Memact may create, and how to stop future access.
+- Features should never require hidden data or a browser extension.
 
 ## Runtime
 

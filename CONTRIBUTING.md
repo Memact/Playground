@@ -1,6 +1,6 @@
 # Contributing
 
-Studio features should be small, inspectable, and honest about uncertainty.
+Playground features should be small, inspectable, and honest about uncertainty.
 
 - Declare required scopes and schema types in the manifest.
 - Do not use undeclared raw data.

@@ -1,6 +1,6 @@
-# Memact Studio
+# Memact Playground
 
-Studio is where Memact features are built and tested.
+Playground is where Memact features are built and tested.
 
 Features are small apps that use permitted Memact memory and schema packets.
 
@@ -8,7 +8,7 @@ Current feature:
 
 - Adaptive Article Overview: helps article apps choose a better overview style from the article and approved reading memory.
 
-Studio is the open-source/default/community feature repo. Future private or
+Playground is the open-source/default/community feature repo. Future private or
 commercial features do not all have to live here.
 
 Contributors add features as folders. Each feature needs a manifest and a small

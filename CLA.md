@@ -1,6 +1,6 @@
 # Contributor License Agreement
 
-By submitting a contribution to Memact Studio, you keep your copyright and grant
+By submitting a contribution to Memact Playground, you keep your copyright and grant
 Memact a perpetual, worldwide, royalty-free, sublicensable license to use,
 reproduce, modify, distribute, and include that contribution.
 

@@ -1,5 +1,5 @@
 {
-  "name": "@memact/studio",
+  "name": "@memact/playground",
   "version": "0.0.1",
   "private": false,
   "license": "Apache-2.0",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Memact/Studio.git"
+    "url": "https://github.com/Memact/Playground.git"
   },
   "engines": {
     "node": ">=20"

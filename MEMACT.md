@@ -64,11 +64,11 @@ You are the developers building those services.
 - Inference: understands activity.
 - Schema: organizes it.
 - Memory: stores it.
-- Contracts: defines the data shapes used by the SDK, backend, and Studio features.
+- Contracts: defines the data shapes used by the SDK, backend, and Playground features.
 - SDK: helper code apps use to send activity and run Memact features.
-- Studio: place for features. This is your workplace.
+- Playground: place for features. This is your workplace.
 
-## Before building a Studio feature
+## Before building a Playground feature
 
 - Read the Contracts repo first. It tells you what data should look like.
 - Read the SDK repo next. It shows how apps send activity and run features.
@@ -76,7 +76,7 @@ You are the developers building those services.
 - Do not invent your own random input/output format.
 - Do not bypass the SDK/runtime just because it feels faster.
 
-## Studio features
+## Playground features
 
 - Make small features like reading topics, shopping preferences, study maps, cognitive load, memory wiki, etc. Whatever is in your mind.
 
@@ -89,20 +89,20 @@ Any feature that apps can use must fit this user flow:
 3. The app keeps a Wiki link visible after access.
 4. The Wiki explains what the app can add, what Memact may create, and how the user can stop future access.
 
-Do not design a Studio feature that only works through hidden data. The browser extension is optional, not required.
+Do not design a Playground feature that only works through hidden data. The browser extension is optional, not required.
 
-## Studio license and CLA
+## Playground license and CLA
 
-- Studio uses the Apache-2.0 license.
+- Playground uses the Apache-2.0 license.
 - Contributors keep their copyright.
-- By contributing, they allow Memact to use, change, share, and include their contribution in Studio.
+- By contributing, they allow Memact to use, change, share, and include their contribution in Playground.
 - Do not submit code you do not have the right to submit.
 
 ## Pull requests
 
 - Keep PRs small.
 - One PR should do one thing.
-- For a Studio feature, include a feature folder, manifest, clear input, clear output, and a basic test or example.
+- For a Playground feature, include a feature folder, manifest, clear input, clear output, and a basic test or example.
 - Before opening a PR, run checks, follow Contracts, use the SDK/runtime normally, and explain the change clearly.
 
 ## Rules

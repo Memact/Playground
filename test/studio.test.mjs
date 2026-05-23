@@ -21,7 +21,7 @@ test("valid and invalid manifests are handled", () => {
 test("listLocalFeatures finds local features", async () => {
   const features = await listLocalFeatures(path.join(root, "features"))
   const registry = createFeatureRegistry(features)
-  assert.equal(registry.length, 4)
+  assert.equal(registry.length, 6)
 })
 
 test("default features run", async () => {
@@ -67,4 +67,38 @@ test("default features run", async () => {
   assert.equal(articleResult.output.summary_style, "deep_dive")
   assert.match(articleResult.output.overview, /New AI policy rules/)
   assert.equal(articleResult.output.confidence, "high")
+
+  const discord = await loadFeature(path.join(root, "features", "discord-channel-personalizer"))
+  const discordResult = await runFeature(discord, {
+    user_memory: {
+      interests: ["memact", "developer tools"],
+      preferred_topics: ["api"],
+      muted_topics: ["memes"],
+      communication_style: "concise updates"
+    },
+    server: {
+      channels: [
+        { id: "1", name: "memact-api", topic: "SDK, API, and feature support" },
+        { id: "2", name: "memes", topic: "off-topic jokes" }
+      ]
+    },
+    recent_server_activity: []
+  })
+  assert.equal(discordResult.output.recommended_channels[0].name, "memact-api")
+  assert.equal(discordResult.output.channels_to_avoid[0].name, "memes")
+
+  const community = await loadFeature(path.join(root, "features", "community-context-brief"))
+  const communityResult = await runFeature(community, {
+    platform: { platform: "discord" },
+    approved_community_activity: [
+      { channel: "docs", topics: ["api", "support"], summary: "User asks support questions about API setup." },
+      { channel: "build", topics: ["projects", "debugging"], summary: "Project-focused debugging discussion." }
+    ],
+    allowed_wiki_context: [
+      { source: "Memact Wiki", interests: ["api"], communication_style: "concise updates" }
+    ]
+  })
+  assert.equal(communityResult.output.preferred_response_style, "clear and concise")
+  assert.ok(communityResult.output.topics_engaged_with.includes("api"))
+  assert.ok(communityResult.output.moderation_safe_notes.length)
 })

@@ -1,0 +1,8 @@
+﻿{
+  "schema_version": "memact.feature_manifest.v0",
+  "feature_id": "discord-channel-personalizer",
+  "name": "Discord Channel Personalizer",
+  "description": "Suggests Discord server channels based on approved user memory and server channel context.",
+  "required_scopes": ["feature:run", "memory:read_summary", "schema:read"],
+  "required_schema_types": ["community_preferences", "communication_preferences", "server_activity"]
+}

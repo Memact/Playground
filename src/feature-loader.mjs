@@ -5,7 +5,8 @@ import { validateFeatureManifest } from "./manifest-validator.mjs"
 
 export async function loadFeature(featurePath) {
   const manifestPath = path.join(featurePath, "manifest.json")
-  const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"))
+  const manifestText = (await fs.readFile(manifestPath, "utf8")).replace(/^\uFEFF/, "")
+  const manifest = JSON.parse(manifestText)
   const validation = validateFeatureManifest(manifest)
   if (!validation.ok) throw new Error(`Invalid feature manifest: ${validation.errors.join(", ")}`)
   const module = await import(pathToFileURL(path.join(featurePath, "index.mjs")).href)

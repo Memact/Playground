@@ -4,9 +4,10 @@ Playground is where Memact features are built and tested.
 
 Features are small apps that use permitted Memact memory and schema packets.
 
-Current feature:
+Current features:
 
 - Adaptive Article Overview: helps article apps choose a better overview style from the article and approved reading memory.
+- Discord Channel Personalizer: helps a consenting Discord user find useful server channels from approved Wiki memory and server channel context.
 
 Playground is the open-source/default/community feature repo. Future private or
 commercial features do not all have to live here.

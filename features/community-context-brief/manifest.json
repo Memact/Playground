@@ -1,0 +1,10 @@
+{
+  "schema_version": "memact.feature_manifest.v0",
+  "feature_id": "community-context-brief",
+  "name": "Community Context Brief",
+  "description": "Summarizes approved community context for apps and platform bots without exposing raw private activity.",
+  "required_scopes": ["feature:run", "memory:read_summary", "schema:read", "platform:bot"],
+  "required_schema_types": ["community_preferences", "platform_preferences", "communication_preferences"],
+  "input_contract": "memact.feature.community_context_brief.input.v0",
+  "output_contract": "memact.feature.community_context_brief.output.v0"
+}

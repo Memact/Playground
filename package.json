@@ -2,7 +2,7 @@
   "name": "@memact/playground",
   "version": "0.0.1",
   "private": false,
-  "license": "Apache-2.0",
+  "license": "MIT",
   "type": "module",
   "description": "Open-source Memact feature runtime and default feature library.",
   "main": "./src/index.mjs",
